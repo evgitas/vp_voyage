@@ -1,12 +1,15 @@
 <?php get_header(); ?>
-<h1> esame single.php </h1>
-		<div id="fh5co-about">
-			<div class="row">
+<aside id="single">
+	<div>
+		<div class="widthcontainer">
+			<div class="row center">
 				<div class="col-md-8 col-md-offset-2 text-center animate-box">
-					<div class="about-desc">
-						<?php the_content(); ?>
-					</div>
+						<div>
+						<h4><?php the_content(); ?></h4>
+						</div>
 				</div>
 			</div>
-		</div>
+		</div>		
+	</div>
+</aside>
 <?php get_footer(); ?>

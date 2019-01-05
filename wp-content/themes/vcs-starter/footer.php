@@ -24,7 +24,7 @@
 										//vykdome uzklausa i DB pagal nurodytus parametrus
 										$result = new WP_Query($query);
 										//dump($result);
-
+										$i=0;
 										if ($result->have_posts()):
 											while ($result->have_posts()):
 												$result->the_post();
@@ -43,6 +43,10 @@
 												</div>
 								<?php
 								//break;//nutraukiame cikla po pirmos iteracijos nes norime isvesti tik viena pagrindine naujiena
+								$i++;
+								if ($i>1){
+									break;
+								}
 								endwhile; // end while
 								endif; // end if
 								wp_reset_postdata();
@@ -71,8 +75,8 @@
 						<div class="col-12 col-md-6 col-lg-3 ">
 							<div class="footer_content">
 								<div><h3>Address</h3></div>
-								<div class=""><h4>DieSachbearbeiter Schönhauser Allee 167c,10435 Berlin Germany 
-									<span>E-mail:</span><a href="mailto:info@yoursite.com"> moin@generator.de</h4></a>
+								<div class=""><h4><?php  the_field('ai_description', 'option'); ?> 
+									<span>E-mail:</span><a href="mailto:<?php  the_field('io_email', 'option'); ?>"> <?php  the_field('io_email', 'option'); ?></h4></a>
 									<ul class="social flex-container">
 									<li>
 										<a href="http://facebook.com" target="_blank">

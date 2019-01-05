@@ -73,7 +73,7 @@ function theme_stylesheets(){
 		wp_enqueue_style('Roboto');
 		wp_enqueue_style('fa');
 		wp_enqueue_style('bootstrap');
-		wp_enqueue_style('carousel');
+		wp_enqueue_style('animate');
 		wp_enqueue_style('style');
 	}
 }
