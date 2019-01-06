@@ -6,12 +6,29 @@
 					<div class="widthcontainer">
 						<div class="flex-container2">
 							<div>
-								<h1>To travel is to live</h1>
-								<h2>You Don't Need Magic to Disappear. All you need is a destination.</h2>
+								<h1><?php  the_field('hs_slogan'); ?></h1>
+								<h2><?php  the_field('hs_slogan_description'); ?></h2>
 							</div>
 							<div>
-								<a class="btn" href="#">Show on map</a>
-								<a class="btn" href="#">More info</a>
+								<?php 
+								//galima su loop'u ir repeater'iu, bet cia taip reikia :)
+								$button_one = get_field('hs_button_one_link');
+								$button_two = get_field('hs_button_two_link');
+									if($button_one['target']){
+							    		$target_one = 'target="'.$button_one['target'].'"';
+							    	} else {
+							    		$target_one = '';
+							    	}
+
+							    	if($button_two['target']){
+							    		$target_two = 'target="'.$button_two['target'].'"';
+							    	} else {
+							    		$target_two = '';
+							    	}
+								?>
+
+								<a class="btn" href="<?php echo $button_one['url']; ?>" <?php echo $target_one; ?>><?php  the_field('hs_button_one'); ?></a>
+								<a class="btn" href="<?php echo $button_two['url']; ?>" <?php echo $target_two; ?>><?php  the_field('hs_button_two'); ?></a>
 							</div>
 						</div>
 					</div>
@@ -33,4 +50,4 @@
 			</div>
 		</div>
 	</section>
-	<!-- Landing picture with searc end -->
+	<!-- Landing picture with search end -->

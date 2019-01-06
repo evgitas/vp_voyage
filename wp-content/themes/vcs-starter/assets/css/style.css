@@ -231,10 +231,12 @@ h2 {
   margin: : 20px;
 }
 
+
 .slogan_container a:hover{
 	/*color: #1dd2af;*/
 	background-color: #1dd2af;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	color: #fff;
 }
 
 .flex-container4{
@@ -1184,4 +1186,9 @@ a{
 a:hover{
 	color: #1dd2af;
 	text-decoration: none;
+}
+
+
+label {
+    cursor: default;
 }

@@ -78,26 +78,25 @@
 								<div class=""><h4><?php  the_field('ai_description', 'option'); ?> 
 									<span>E-mail:</span><a href="mailto:<?php  the_field('io_email', 'option'); ?>"> <?php  the_field('io_email', 'option'); ?></h4></a>
 									<ul class="social flex-container">
-									<li>
-										<a href="http://facebook.com" target="_blank">
-											<i class="fab fa-facebook-f"></i>
-										</a>
-									</li>
-									<li>
-										<a href="http://pinterest.com" target="_blank">
-											<i class="fab fa-pinterest-p"></i>
-										</a>
-									</li>
-									<li>
-										<a href="http://twitter.com" target="_blank">
-											<i class="fab fa-twitter"></i>
-										</a>
-									</li>
-									<li>
-										<a href="http://linkedin.com" target="_blank">
-											<i class="fab fa-linkedin-in"></i>
-										</a>
-									</li>
+										<?php 
+											if(have_rows('so_social_menu_repeater', 'option')):
+											    while (have_rows('so_social_menu_repeater', 'option')) : the_row();
+											    	$link = get_sub_field('link');
+											    	if($link['target']){
+											    		$target = 'target="'.$link['target'].'"';
+											    	} else {
+											    		$target = '';
+											    	}
+											    	?>
+														<li>
+															<a href="<?php echo $link['url']; ?>" <?php echo $target; ?>>
+																<i class="<?php  the_sub_field('icon'); ?>"></i>
+															</a>
+														</li>
+													<?php 
+											    endwhile;
+											endif;
+										?>
 								</ul>
 								</div>
 							</div>
@@ -107,18 +106,6 @@
 		</div>
 		<div class="footer_nav_top_border">
 			<div class="container">
-				<div>
-					<div class="footer_nav">
-						<ul class="flex-container">                        
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Destinations</a></li>
-						<li><a href="#">Cruises</a></li>
-						<li><a href="#">Special</a></li>
-						<li><a href="#">Holidays</a></li>
-						<li><a href="#">Blog</a></li>
-						</ul>
-					</div>
-				</div>
 				<div class="footer_copyright"><h4>Copyright @voyage. All Right Reserved</h4></div>
 				<div class="footer_triangle_to_top"><a href="#" target="_top"><i class="triangle"></i></a></div>
 			</div>

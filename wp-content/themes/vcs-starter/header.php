@@ -27,35 +27,35 @@
 				<div class="flex-container flex_wraping">
 					<div>
 						<ul class="flex-container">                        
-							<li><a href="#">Agent Login</a></li>
-							<li><a href="#">Custome Login</a></li>
-							<li><a href="#">Not a Member? <span> Register</span></a></li>
-							<li><a href="tel://3704567920">Call Us Now: +3704567920</a></li>
+							<li><a href="<?php bloginfo('url'); echo '/customer-login/'; ?>">Agent Login</a></li>
+							<li><a href="<?php bloginfo('url'); echo '/customer-login/'; ?>">Customer Login</a></li>
+							<li><a href="<?php bloginfo('url'); echo '/member-register/'; ?>">Not a Member? <span> Register</span></a></li>
+							<li><a href="tel://<?php  the_field('io_phone', 'option'); ?>">Call Us Now: <?php  the_field('io_phone', 'option'); ?></a></li>
 						</ul>
 					</div>
 					<div>
-							<ul class="flex-container">
-								<li>
-									<a href="http://facebook.com" target="_blank">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-								</li>
-								<li>
-									<a href="http://pinterest.com" target="_blank">
-										<i class="fab fa-pinterest-p"></i>
-									</a>
-								</li>
-								<li>
-									<a href="http://twitter.com" target="_blank">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="http://linkedin.com" target="_blank">
-										<i class="fab fa-linkedin-in"></i>
-									</a>
-								</li>
-							</ul>
+						<ul class="flex-container">
+								<?php 
+							if(have_rows('so_social_menu_repeater', 'option')):
+							    while (have_rows('so_social_menu_repeater', 'option')) : the_row();
+							    	$link = get_sub_field('link');
+							    	if($link['target']){
+							    		$target = 'target="'.$link['target'].'"';
+							    	} else {
+							    		$target = '';
+							    	}
+							    	?>
+										<li>
+											<a href="<?php echo $link['url']; ?>" <?php echo $target; ?>>
+												<i class="<?php  the_sub_field('icon'); ?>"></i>
+											</a>
+										</li>
+									<?php 
+							    endwhile;
+							endif;
+
+							?>
+						</ul>
 					</div>
 				</div>
 			</div>
