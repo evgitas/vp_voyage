@@ -545,9 +545,25 @@ h5{
 	border: 2px solid #1dd2af;
  }
 
- .holiday_type_content:hover h4 { 
+#holiday_type .far{
+	border: 2px solid #fff;
+ 	border-radius: 50%;
+ 	color: #fff;
+ 	font-size: 3.25rem;
+ 	padding: 30px;
+
+}
+ .holiday_type_content:hover h4,
+ .holiday_type_content:hover .far
+  { 
  	color: #1dd2af;
  }
+ .holiday_type_content:hover .far
+  { 
+ 	border: 2px solid #1dd2af;
+ }
+ 	
+
 
 /*holiday type end */
 /*happy clients start */

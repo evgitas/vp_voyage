@@ -58,16 +58,19 @@
 								<div><h3>Tags</h3></div>
 								<div class="">
 										<ul class="flex-container_tags wrap">
-										  <li class="flex-item"><a class="tags" href="#">Agent Login</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Customer Login</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Not a Member?</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Contact</a></li>
-										  <li class="flex-item"><a class="tags" href="#">New Horozons</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Lanscape</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Tags</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Nice</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Some</a></li>
-										  <li class="flex-item"><a class="tags" href="#">Portrait</a></li>
+
+										<?php 
+											if(have_rows('t_tag_repeater', 'option')):
+											    while (have_rows('t_tag_repeater', 'option')) : the_row();
+											    	$link = get_sub_field('link');
+											    	?>
+										  				<li class="flex-item">
+										  					<a class="tags" href="<?php echo $link['url']; ?>">
+										  						<?php  the_sub_field('t_new_tag'); ?></a></li>
+													<?php 
+											    endwhile;
+											endif;
+										?>
 										</ul>
 								</div>
 							</div>
@@ -107,7 +110,7 @@
 		<div class="footer_nav_top_border">
 			<div class="container">
 				<div class="footer_copyright"><h4>Copyright @voyage. All Right Reserved</h4></div>
-				<div class="footer_triangle_to_top"><a href="#" target="_top"><i class="triangle"></i></a></div>
+				<div class="footer_triangle_to_top"><a href="<?php bloginfo('url'); ?>" target="_top"><i class="triangle"></i></a></div>
 			</div>
 		</div>
 	</footer>
@@ -115,10 +118,10 @@
 
 <!-- FOOTER stop -->
 
-<!-- 	<div class="gototop js-top">
+	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	 -->
+	
 	
 	<?php  wp_footer(); ?>
 	</body>
