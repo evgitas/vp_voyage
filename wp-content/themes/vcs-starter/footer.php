@@ -107,21 +107,14 @@
 					</div>	
 			<!-- </div> -->
 		</div>
-		<div class="footer_nav_top_border">
+		<div class="footer_top_border">
 			<div class="container">
 				<div class="footer_copyright"><h4>Copyright @voyage. All Right Reserved</h4></div>
-				<div class="footer_triangle_to_top"><a href="<?php bloginfo('url'); ?>" target="_top"><i class="triangle"></i></a></div>
+				<div class="footer_triangle_to_top"><a href="#header_top"><i class="triangle"></i></a></div>
 			</div>
 		</div>
 	</footer>
-
-
 <!-- FOOTER stop -->
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
-	</div>
-	
 	
 	<?php  wp_footer(); ?>
 	</body>

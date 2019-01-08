@@ -9,11 +9,11 @@
 </head>
 <body>
 	<!-- header top start -->
-	<section class="top">
+	<section id="header_top" class="top">
 		<div>
 			<div class="header-top">
 		      <div class="widthcontainer">
-		        <form action="">
+		        <form action="#">
 		          <div id="search">
 		          <input type="text" placeholder="Enter search keyword here ......" name="s" id="top_search" style="display: inline-block;">
 		          <button type="submit">

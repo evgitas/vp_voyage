@@ -8,7 +8,7 @@
 								the_post();
 					?>
 					<div class="col-xs-12 col-md-4">
-						<div class="fh5co-blog">
+						<div class="blog">
 							<a href="<?php the_permalink(); ?>" class="blog-bg" style="background-image: url(<?php the_post_thumbnail_url('medium_large'); ?>);"></a>
 							<div class="blog-text">
 								<h4><?php echo get_the_date('M. jS Y H:i'); ?></h4>

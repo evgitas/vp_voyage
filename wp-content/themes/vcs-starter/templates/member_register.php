@@ -24,7 +24,7 @@ get_header();
 						    <h4><label for="psw-repeat"><b>Repeat Password</b></label>
 						    <input type="password" placeholder="Repeat Password" name="psw-repeat" required></h4>
 						    <h4>By creating an account you agree to our <a href="<?php bloginfo('url'); echo '/privacy-policy/'; ?>">Terms & Privacy</a>.</h4>
-						    <h4><button type="submit">Register</button></h4>
+						    <h4><button class="btnn" type="submit">Register</button></h4>
 						  </form>
 					</div>
 				</div>

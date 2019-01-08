@@ -17,7 +17,7 @@ get_header();
 						    <input type="text" placeholder="Enter Email" name="email" required></h4>
 						    <h4><label for="psw"><b>Password</b></label>
 						    <input type="password" placeholder="Enter Password" name="psw" required></h4>
-						    <h4><button type="submit" class="registerbtn">Login</button></h4>
+						    <h4><button type="submit" class="btnn">Login</button></h4>
 						  </form>
 					</div>
 				</div>
