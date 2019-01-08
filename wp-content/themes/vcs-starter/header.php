@@ -8,7 +8,7 @@
 	<?php  wp_head(); ?>
 </head>
 <body>
-	<!-- landing top start -->
+	<!-- header top start -->
 	<section class="top">
 		<div>
 			<div class="header-top">
@@ -61,56 +61,33 @@
 			</div>
 	</section>
 	<!-- navigation start -->
-<!-- 	<section class="navigation">
-		<div class="container">
+	<header class="header">
+		<div class="widthcontainer">
 			<div class="flex-container">
-				<div class="logo">V<span>O</span>YAGE</div>
-				<div class="flex-container main_navigation">
-					<div class="">
-						<ul class="flex-container">                        
-						<li><a href="#">Home</a></li>
-						<li><a href="#offers">Special</a></li>
-						<li><a href="#holiday_type">Holidays</a></li>
-						<li><a href="#contacs">Contacts</a></li>
-						<li><a href="#clients">Clients</a></li>
-						<li><a href="#">Blog</a></li>
-						</ul>
-					</div>
-					<div class=""><a href="#" id="search-icon"><i class="fas fa-search circle"></i></a></div>
+				<div>
+				  <a href="<?php bloginfo('url'); ?>" class="logo">V<span>O</span>YAGE</a>
 				</div>
+				 <div class="flex-container">
+				 	<div>
+						  <input class="menu-btn" type="checkbox" id="menu-btn" />
+						  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+							<?php
+							$args = [
+								'manu_class' => 'ul-klase kita-klase',
+								'container' => false,
+								'theme_location' => 'primary-navigation'
+							];
+							wp_nav_menu($args);
+							?>  
+					</div>
+					<div>
+						<a href="#" id="search-icon"><i class="fas fa-search circle"></i></a>
+					</div>
+				 </div>
 			</div>
 		</div>
-	</section> -->
-	<!-- Navigation end -->
-
-	<!-- Navigation test -->
-		<header class="header">
-			<div class="widthcontainer">
-				<div class="flex-container">
-					<div>
-					  <a href="<?php bloginfo('url'); ?>" class="logo">V<span>O</span>YAGE</a>
-					</div>
-					 <div class="flex-container">
-					 	<div>
-							  <input class="menu-btn" type="checkbox" id="menu-btn" />
-							  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-								<?php
-								$args = [
-									'manu_class' => 'ul-klase kita-klase',
-									'container' => false,
-									'theme_location' => 'primary-navigation'
-								];
-								wp_nav_menu($args);
-								?>  
-						</div>
-						<div>
-							<a href="#" id="search-icon"><i class="fas fa-search circle"></i></a>
-						</div>
-					 </div>
-				</div>
-			</div>
-		</header>
-		<!-- Navigatio test end -->
+	</header>
+	<!-- Navigation  end -->
 
 			<?php
 		if(is_front_page()){

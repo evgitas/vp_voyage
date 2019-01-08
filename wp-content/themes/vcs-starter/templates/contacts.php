@@ -5,12 +5,11 @@
 get_header();
 
 ?>
-
-<!-- Start Point -->
+<!-- Start Contacts -->
 		<div id="contact">
 			<div class="widthcontainer">
 				<div class="row center">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<div class="col-md-6 col-md-offset-3 text-center">
 						<h4><?php the_content(); ?></h4>
 					</div>
 				</div>
@@ -38,5 +37,5 @@ get_header();
 				</div>
 			</div>
 		</div>
-
+<!-- End Contacts -->
 <?php get_footer(); ?>

@@ -50,4 +50,4 @@
 			</div>
 		</div>
 	</section>
-	<!-- Landing picture with search end -->
+	<!-- Hero picture with search end -->

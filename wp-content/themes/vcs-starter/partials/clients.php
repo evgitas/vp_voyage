@@ -1,6 +1,5 @@
 <!-- Happy clients section start -->
 	<section id="clients" class="happy_clients">
-		<!-- <div class="flex-container"> -->
 			<div class=""><h3><?php the_field('hc_clients_title'); ?></h3>
 						<h4><?php the_field('hc_clients_slogan'); ?></h4>
 			</div>

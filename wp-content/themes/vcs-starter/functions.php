@@ -17,15 +17,6 @@ function theme_scripts(){
     	//wp_register_script(handle, path, dependency, version, in_footer)
     	//in_footer - ar krauti faila i footer dali (TRUE|FALSE)
 
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    	//<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		//<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		//<script src="assets/js/bootstrap.min.js"></script> -->
-		//<script type="text/javascript" src="assets/js/carousel.js"></script>
-		//<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		//<script type="text/javascript" src="assets/js/custom.js"></script>
-
-
     	wp_register_script('popper', ASSETS_URL . '/assets/js/popper.min.js', false, false, false);
         wp_deregister_script('jquery'); 
 		wp_register_script('jquery', ASSETS_URL . '/assets/js/jquery.min.js', false, false, true);
@@ -48,21 +39,6 @@ function theme_stylesheets(){
 	$styles_path = ASSETS_URL . '/assets/css/main.css';
 
 	if( $styles_path ) {
-
-
-		//"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		//<link rel="stylesheet" href="assets/css/carousel.css">
-		// <link rel="stylesheet" href="assets/css/bootstrap.css">
-		//<link rel="stylesheet" href="assets/css/style.css">
-
-		// wp_register_style(handle, path, dependency, version, devices);
-		// handle - failo nickname, kuri naudosime sistemoje
-		// path - kelias iki failo
-		// dependency - failai kurie turi pasikrauti pirmiau
-		// version - versija
-		// devices - irenginiai kuriems skirtas CSS failas
-	
-		//wp_register_style('main-css', ASSETS_URL . '/assets/css/main.css', array(), false, 'all');
 		
 		wp_register_style('Roboto', 'https://fonts.googleapis.com/css?family=Raleway|Roboto:300,400,500,700', array(), false, 'all');
 		wp_register_style('fa', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css', array('Roboto'), false, 'all');

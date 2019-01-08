@@ -5,16 +5,11 @@
 get_header();
 
 ?>
-<!-- Start Point -->
-		<div id="customer">
+<!-- Start Customer Login -->
+		<div id="customer_login">
 			<div class="widthcontainer">
-				<div class="row center">
-					<div class="col-md-6 col-md-offset-3 text-center">
-					</div>
-				</div>
 				<div class="row justify_center">
 					<div class="col-xs-12 col-md-4">
-						<form action="action_page.php">
 						 <h4>Please enter you credencials</h4>
 						    <hr>
 						    <form action="action_page.php">	
@@ -28,4 +23,5 @@ get_header();
 				</div>
 			</div>
 		</div>
+<!-- End Customer Login -->
 <?php get_footer(); ?>
